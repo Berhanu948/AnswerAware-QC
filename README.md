@@ -1,23 +1,22 @@
-# Amharic Answer-Aware Medical Question Classification
+# Amharic question type classification in the medical domain  
 
-This project focuses on **Amharic Answer-Aware Medical Question Classification**, a Natural Language Processing (NLP) task that classifies medical questions into predefined question types by considering both the question and its corresponding answer. The approach is designed for Amharic, a relatively low-resource language, and aims to support research in medical NLP, question classification, and medical education.
+This project focuses on **Amharic question type classification in the medical domain  n**, a Natural Language Processing (NLP) task that classifies medical questions into predefined question types by considering both the question. The approach is designed for Amharic, a relatively low-resource language, and aims to support research in medical NLP, question classification, and medical education.
 
 ## Overview
 
 Question classification is an important component of medical question-answering systems because identifying the type of a question can help determine the appropriate strategy for processing and answering it.
 
-In this project, an **answer-aware classification approach** is investigated, where the model uses both the medical question and its corresponding answer as input. Unlike conventional question classification, which relies only on the question text, the answer-aware setting incorporates answer information to determine the question type.
+In this project, an **Amharic question type classification in the medical domain** is investigated, where the model uses the medical question  as input. 
 
 The task can be formulated as:
 
 $$
-f(q,a) \rightarrow y
+f(q) \rightarrow y
 $$
 
 where:
 
 * \(q\) represents the Amharic medical question,
-* \(a\) represents the corresponding answer,
 * \(y\) represents the question category.
 
 ## Dataset
@@ -42,14 +41,12 @@ The dataset contains four question categories:
 
 
 
-## Answer-Aware Classification
+## Amharic question type classification in the medical domain 
 
 The main experimental setting uses the question and answer together as a unified input.
 
 ```text
 Amharic Question
-       +
-Amharic Answer
        ↓
    Tokenization
        ↓
@@ -84,17 +81,7 @@ Only the question is provided to the model:
 Question → Model → Category
 ```
 
-### Question–Answer Classification (QAC)
 
-Both the question and answer are provided:
-
-<p align="center">
-  <strong>f(q, a) → y</strong>
-</p>
-
-```text
-Question + Answer → Model → Category
-```
 
 Comparing these settings allows the contribution of answer information to be investigated directly.
 
@@ -121,7 +108,7 @@ Amharic Medical QA Dataset
              ↓
       Data Preprocessing
              ↓
-    Question + Answer Pair
+    Question 
              ↓
         Tokenization
              ↓
@@ -160,7 +147,6 @@ The classification models are evaluated using standard metrics:
 * Precision
 * Recall
 * Macro-F1
-* Weighted-F1
 * Confusion Matrix
 * Classification Report
 
@@ -233,7 +219,6 @@ The proposed approach can support research and development in:
 
 * Amharic medical NLP
 * Medical question classification
-* Answer-aware question classification
 * Medical question-answering systems
 * Medical education systems
 * Low-resource language NLP
