@@ -1,4 +1,5 @@
 # Amharic question type classification in the medical domain  
+- Compare the conventional and pretrained language models
 
 This project focuses on **Amharic question type classification in the medical domain  n**, a Natural Language Processing (NLP) task that classifies medical questions into predefined question types by considering both the question. The approach is designed for Amharic, a relatively low-resource language, and aims to support research in medical NLP, question classification, and medical education.
 
